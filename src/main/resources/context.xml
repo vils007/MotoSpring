@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="memoto"
+		class="spring.impls.moto.MotorcycleMe">
+		<constructor-arg ref="hondawheel"/>
+		<constructor-arg ref="hondamotor"/>
+	</bean>
+	<bean id="yourmoto"
+		class="spring.impls.moto.MotorcycleMe">
+		<constructor-arg ref="yamahawheel"/>
+		<constructor-arg ref="yamahamotor"/>
+	</bean>
+	<bean id="notrun"
+		class="spring.impls.moto.MotorcycleNotRun">
+		
+	</bean>
+
+
+<bean id="hondawheel" class="spring.impls.honda.HondaWheels"/>
+<bean id="hondamotor" class="spring.impls.honda.HondaMotor"/>	
+
+<bean id="yamahamotor" class="spring.impls.yamaha.YamahaMotor"/>
+<bean id="yamahawheel" class="spring.impls.yamaha.YamahaWheels"/>
+	
+
+
+</beans>
